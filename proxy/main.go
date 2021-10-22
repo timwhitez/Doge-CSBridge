@@ -67,38 +67,39 @@ type R struct {
 func (R) ModifyResponse(resp *http.Response) error {
 	res := resp
 	otp := []byte(getotp())
-	if resp.Body == nil{
-		resp.Body = http.NoBody
-		resp.ContentLength = 0
+	if res.Body == nil{
+		res.Body = http.NoBody
+		res.ContentLength = 0
 		*resp = *res
 	}else{
 		b, err := ioutil.ReadAll(resp.Body) //Read html
 		fmt.Println("encResp: "+string(b))
 		if err != nil || string(b) == ""{
-			resp.Body = http.NoBody
-			resp.ContentLength = 0
+			res.Body = http.NoBody
+			res.ContentLength = 0
 			*resp = *res
 			return  nil
 		}
 		resp.Body.Close()
 		b64Resp,err := base64.StdEncoding.DecodeString(string(b)[12:])
 		if err != nil || string(b64Resp) == ""{
-			resp.Body = http.NoBody
-			resp.ContentLength = 0
+			res.Body = http.NoBody
+			res.ContentLength = 0
 			*resp = *res
 			return  nil
 		}
 		rawResp,err := decrypt(b64Resp,otp)
 		if err != nil || string(rawResp) == ""{
-			resp.Body = http.NoBody
-			resp.ContentLength = 0
+			res.Body = http.NoBody
+			res.ContentLength = 0
 			*resp = *res
 			return  nil
 		}
 		fmt.Println("rawResp: "+string(rawResp))
 		body := ioutil.NopCloser(bytes.NewReader(rawResp))
-		resp.Body = body
-		resp.ContentLength = int64(len(rawResp))
+		res.Body = body
+		res.ContentLength = int64(len(rawResp))
+		*resp = *res
 	}
 
 	return nil
