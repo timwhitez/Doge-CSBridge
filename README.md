@@ -5,10 +5,6 @@ CS http Dynamic Encrypt Bridge.
 
 - 🐶Doge For Defense Evasion&Offensive Security
 
-- 本系列命名为Frog可能是因为这种生物的寿命长 🐸 🤓 +1s 
-
-- Frog-Fp为Frog系列第三个项目🐸，写的有点累了
-
 - 安全本逆天而行，猝死很正常，请勿用作授权之外非法用途
 
 ## 0x00 引
