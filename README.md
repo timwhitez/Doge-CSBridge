@@ -30,7 +30,7 @@ CS http Dynamic Encrypt Bridge.
 
 ![image](https://user-images.githubusercontent.com/36320909/141474352-32bf7ee7-2391-4f0c-8b77-fee42e637aed.png)
 
-代码不完善，默认流量存在无法加密字符，需使用profile先对流量处理(base64)
+代码不完善，默认流量存在无法加密字符，需使用profile对流量进行预处理
 
 ## 0x02
 
