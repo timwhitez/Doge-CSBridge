@@ -1,6 +1,16 @@
 # Doge-CSBridge
 CS http Dynamic Encrypt Bridge.
 
+- 🐸Frog For Automatic Scan
+
+- 🐶Doge For Defense Evasion&Offensive Security
+
+- 本系列命名为Frog可能是因为这种生物的寿命长 🐸 🤓 +1s 
+
+- Frog-Fp为Frog系列第三个项目🐸，写的有点累了
+
+- 安全本逆天而行，猝死很正常，请勿用作授权之外非法用途
+
 ## 0x00 引
 
 流量层面的对抗处于地位，而Cobalt Strike的profile配置文件虽然给予了使用者很大的灵活性去做流量混淆，但仍然会存在特征。
